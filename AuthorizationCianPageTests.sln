@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32922.545
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AuthorizationCianPageTests", "AuthorizationCianPageTests\AuthorizationCianPageTests.csproj", "{93D247BF-D7FB-4C62-BCF9-74563A0906B6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{4D5C934A-1BAC-4337-B98B-E77FDD3FF494}"
+	ProjectSection(SolutionItems) = preProject
+		dev.runsettings = dev.runsettings
+		qa.runsettings = qa.runsettings
+		Testing.xml = Testing.xml
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{93D247BF-D7FB-4C62-BCF9-74563A0906B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{93D247BF-D7FB-4C62-BCF9-74563A0906B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{93D247BF-D7FB-4C62-BCF9-74563A0906B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{93D247BF-D7FB-4C62-BCF9-74563A0906B6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8449D079-EBAC-4D5A-B8A7-ADD59B8E1AB5}
+	EndGlobalSection
+EndGlobal

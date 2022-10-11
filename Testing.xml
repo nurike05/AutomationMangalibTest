@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Practice Suite">
+	<test name="Test Basics 1">
+		<parameter name="login" value="nurike05"/>
+		<parameter name="password" value="1718121707a"/>
+		<classes>
+			<class name="TestCategory"/>
+		</classes>
+	</test>
+	<!-- Test -->
+</suite>
+<!-- Suite -->
