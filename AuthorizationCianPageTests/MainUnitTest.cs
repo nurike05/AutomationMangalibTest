@@ -1,43 +1,68 @@
 ﻿using AuthorizationCianPageTests.PageObjects;
 using NUnit.Framework;
+using NUnit.Framework.Interfaces;
 using OpenQA.Selenium;
 
 namespace AuthorizationCianPageTests
 {
     public class Tests
     {
-        private IWebDriver driver;
-        
-       
+        //private IWebDriver driver;
+        private Steps.Steps steps = new Steps.Steps();
+        TestListener listener = new TestListener();
         [SetUp]
         public void Setup()
         {
-            driver = new OpenQA.Selenium.Chrome.ChromeDriver();
-            driver.Navigate().GoToUrl("https://mangalib.me/");
-            driver.Manage().Window.Maximize();
+            steps.InitBrowser();
         }
 
         [Test]
         public void MainTest()
         {
-            // arrange
-            var mainMenu = new MainMenuPageObject(driver);
-            var expectedResult = UserNameForTests.userLogin;
-            mainMenu
-                .SignIn()
-                .Login(UserNameForTests.userLogin, UserNameForTests.userPassword);
-
-            // act
-            var actualResult = mainMenu.CheckUserProfile();
             
-            // assert
-            Assert.AreEqual(expectedResult, actualResult);
+                // arrange
+                steps.LoginMangalib();
+                //var expectedResult = UserNameForTests.GetUserName();
+                var expectedResult = UserNameForTests.userLogin;
+
+                // act
+                //var actualResult = steps.CheckUserName();
+                var actualResult = steps.CheckUserName();
+
+                // assert
+                Assert.AreEqual(expectedResult, actualResult);
+         
+       
+        }
+
+        [Test, TestCaseSource("Testing.xml")]
+        [Category("Testing")]
+        [Ignore("")]
+        public void MainTestWithXML()
+        {
+            
+                // arrange
+                steps.LoginMangalib();
+                //var expectedResult = UserNameForTests.GetUserName();
+                var expectedResult = UserNameForTests.userLogin;
+
+                // act
+                //var actualResult = steps.CheckUserName();
+                var actualResult = steps.CheckUserName();
+
+                // assert
+                Assert.AreEqual(expectedResult, actualResult);
+       
         }
 
         [TearDown]
         public void TearDown()
         {
-            driver.Quit();
+            if (!TestContext.CurrentContext.Result.Outcome.Status.Equals(TestStatus.Passed))
+            {
+                listener.TakeScreenshot();
+            }
+            steps.CloseBrowser();
         }
     }
 }

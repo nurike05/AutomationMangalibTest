@@ -5,10 +5,11 @@ using OpenQA.Selenium.Support.UI;
 
 namespace AuthorizationCianPageTests.PageObjects
 {
-    public class MainMenuPageObject
+    public class MainMenuPageObject : AbstractPage
     {
         private IWebDriver webDriver;
 
+        private const string BASE_URL = "https://mangalib.me/";
         private readonly By _signInButton = By.XPath("//a[text()='Вход']");
         private readonly By _userProfile = By.CssSelector("a.menu__item");
         private readonly By _onImage = By.CssSelector("img.header-right-menu__avatar");
@@ -28,11 +29,16 @@ namespace AuthorizationCianPageTests.PageObjects
         public string CheckUserProfile()
         {
             WebDriverWait wait = new WebDriverWait(webDriver, TimeSpan.FromSeconds(10));
-            wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(_onImage));
+            wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementToBeClickable(_onImage));
             webDriver.FindElement(_onImage).Click();
             webDriver.FindElement(_userProfile).Click();
             string result = webDriver.FindElement(_userName).Text;
             return result;
+        }
+
+        public override void OpenPage()
+        {
+            webDriver.Navigate().GoToUrl(BASE_URL);
         }
     }
 }
