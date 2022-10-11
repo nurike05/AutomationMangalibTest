@@ -3,8 +3,11 @@ using AuthorizationCianPageTests.PageObjects;
 using AuthorizationCianPageTests.Service;
 using OpenQA.Selenium;
 using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
+using System.Xml.Linq;
 
 namespace AuthorizationCianPageTests.Steps
 {
@@ -12,6 +15,7 @@ namespace AuthorizationCianPageTests.Steps
     {
         IWebDriver driver;
         User testUser = UserCreator.SetWithCredentialsFromProperty();
+
         public IWebDriver InitBrowser()
         {
             driver = Driver.DriverInstance.GetInstance();
@@ -28,8 +32,15 @@ namespace AuthorizationCianPageTests.Steps
         {
             MainMenuPageObject mainMenu = new MainMenuPageObject(driver);
             mainMenu.OpenPage();
-            //mainMenu.SignIn().Login(UserNameForTests.GetUserName(), UserNameForTests.GetPassword());
-            mainMenu.SignIn().Login(testUser);
+            mainMenu.SignIn().Login(testUser.GetUsernameFromProp, testUser.GetPasswordFromProp);
+           // mainMenu.SignIn().Login(testUser);
+        }
+
+        public void LoginMangalib(string login, string password)
+        {
+            MainMenuPageObject mainMenu = new MainMenuPageObject(driver);
+            mainMenu.OpenPage();
+            mainMenu.SignIn().Login(login, password);
         }
 
         public string CheckUserName()

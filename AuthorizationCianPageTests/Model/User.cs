@@ -1,4 +1,5 @@
-﻿using System;
+﻿using NUnit.Framework;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -14,14 +15,29 @@ namespace AuthorizationCianPageTests.Model
             this.password = password;
         }
 
-        public string GetUsername()
+        public string GetUsername
         {
-            return username;
+            get { return username; }
         }
 
-        public string GetPassword() 
+        public string GetPassword
         { 
-            return password;
+            get { return password; }
+        }
+
+        public string GetUsernameFromProp
+        {
+            get
+            {
+                return TestContext.Parameters["devUserName"];
+            }
+        }
+        public string GetPasswordFromProp
+        {
+            get
+            {
+                return TestContext.Parameters["devPassword"];
+            }
         }
     }
 }

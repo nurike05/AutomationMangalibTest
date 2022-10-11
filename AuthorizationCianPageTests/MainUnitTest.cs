@@ -1,58 +1,68 @@
 ﻿using AuthorizationCianPageTests.PageObjects;
+using AuthorizationCianPageTests.Service;
 using NUnit.Framework;
 using NUnit.Framework.Interfaces;
 using OpenQA.Selenium;
+using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
+using System.Xml.Linq;
 
 namespace AuthorizationCianPageTests
 {
+    [TestFixture]
     public class Tests
     {
         //private IWebDriver driver;
         private Steps.Steps steps = new Steps.Steps();
         TestListener listener = new TestListener();
+
         [SetUp]
         public void Setup()
         {
             steps.InitBrowser();
         }
 
+      
         [Test]
         public void MainTest()
         {
-            
-                // arrange
-                steps.LoginMangalib();
-                //var expectedResult = UserNameForTests.GetUserName();
-                var expectedResult = UserNameForTests.userLogin;
 
-                // act
-                //var actualResult = steps.CheckUserName();
-                var actualResult = steps.CheckUserName();
+            // arrange
+            steps.LoginMangalib();
+            var expectedResult = UserCreator.USER_NAME;
 
-                // assert
-                Assert.AreEqual(expectedResult, actualResult);
-         
-       
+            // act
+            var actualResult = steps.CheckUserName();
+
+            // assert
+            Assert.AreEqual(expectedResult, actualResult);
+        }
+      
+        [Ignore("")]
+        [TestCaseSource(nameof(TestData))]
+        public void MainTestWithXML(string login, string password)
+        {
+            // arrange
+            steps.LoginMangalib(login, password);
+            var expectedResult = UserCreator.USER_NAME;
+
+            // act
+            var actualResult = steps.CheckUserName();
+
+            // assert
+            Assert.AreEqual(expectedResult, actualResult);
         }
 
-        [Test, TestCaseSource("Testing.xml")]
-        [Category("Testing")]
-        [Ignore("")]
-        public void MainTestWithXML()
+        private IEnumerable TestData()
         {
-            
-                // arrange
-                steps.LoginMangalib();
-                //var expectedResult = UserNameForTests.GetUserName();
-                var expectedResult = UserNameForTests.userLogin;
-
-                // act
-                //var actualResult = steps.CheckUserName();
-                var actualResult = steps.CheckUserName();
-
-                // assert
-                Assert.AreEqual(expectedResult, actualResult);
-       
+            // read data from xml file
+            var doc = XDocument.Load(@"C:\Users\Nurlan_Nurdildauly\source\repos\AutomationMangalibGit\testing.xml");
+            return
+                from vars in doc.Descendants("vars")
+                let login = vars.Attribute("login").Value
+                let password = vars.Attribute("password").Value
+                select new object[] { login, password };
         }
 
         [TearDown]
@@ -64,5 +74,6 @@ namespace AuthorizationCianPageTests
             }
             steps.CloseBrowser();
         }
+       
     }
 }

@@ -1,0 +1,10 @@
+C:\Users\Nurlan_Nurdildauly\source\repos\AutomationMangalibGit\AuthorizationCianPageTests\bin\Debug\netcoreapp3.1\AuthorizationCianPageTests.deps.json
+C:\Users\Nurlan_Nurdildauly\source\repos\AutomationMangalibGit\AuthorizationCianPageTests\bin\Debug\netcoreapp3.1\AuthorizationCianPageTests.dll
+C:\Users\Nurlan_Nurdildauly\source\repos\AutomationMangalibGit\AuthorizationCianPageTests\bin\Debug\netcoreapp3.1\AuthorizationCianPageTests.pdb
+C:\Users\Nurlan_Nurdildauly\source\repos\AutomationMangalibGit\AuthorizationCianPageTests\obj\Debug\netcoreapp3.1\AuthorizationCianPageTests.csproj.AssemblyReference.cache
+C:\Users\Nurlan_Nurdildauly\source\repos\AutomationMangalibGit\AuthorizationCianPageTests\obj\Debug\netcoreapp3.1\AuthorizationCianPageTests.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Nurlan_Nurdildauly\source\repos\AutomationMangalibGit\AuthorizationCianPageTests\obj\Debug\netcoreapp3.1\AuthorizationCianPageTests.AssemblyInfoInputs.cache
+C:\Users\Nurlan_Nurdildauly\source\repos\AutomationMangalibGit\AuthorizationCianPageTests\obj\Debug\netcoreapp3.1\AuthorizationCianPageTests.AssemblyInfo.cs
+C:\Users\Nurlan_Nurdildauly\source\repos\AutomationMangalibGit\AuthorizationCianPageTests\obj\Debug\netcoreapp3.1\AuthorizationCianPageTests.csproj.CoreCompileInputs.cache
+C:\Users\Nurlan_Nurdildauly\source\repos\AutomationMangalibGit\AuthorizationCianPageTests\obj\Debug\netcoreapp3.1\AuthorizationCianPageTests.dll
+C:\Users\Nurlan_Nurdildauly\source\repos\AutomationMangalibGit\AuthorizationCianPageTests\obj\Debug\netcoreapp3.1\AuthorizationCianPageTests.pdb
