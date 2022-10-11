@@ -1,0 +1,1 @@
+-dotnet test -- TestRunParameters.Parameter(name=\"login\", value=\"nurike05\")

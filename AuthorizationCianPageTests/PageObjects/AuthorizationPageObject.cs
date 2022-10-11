@@ -29,8 +29,8 @@ namespace AuthorizationCianPageTests.PageObjects
 
         public MainMenuPageObject Login(User user)
         {
-            webDriver.FindElement(_emailLocator).SendKeys(user.GetUsername());
-            webDriver.FindElement(_password).SendKeys(user.GetPassword());
+            webDriver.FindElement(_emailLocator).SendKeys(user.GetUsername);
+            webDriver.FindElement(_password).SendKeys(user.GetPassword);
             webDriver.FindElement(_enterButton).Click();
 
             return new MainMenuPageObject(webDriver);
