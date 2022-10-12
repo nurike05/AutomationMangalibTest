@@ -28,7 +28,7 @@ namespace AuthorizationCianPageTests.PageObjects
 
         public string CheckUserProfile()
         {
-            WebDriverWait wait = new WebDriverWait(webDriver, TimeSpan.FromSeconds(10));
+            WebDriverWait wait = new WebDriverWait(webDriver, TimeSpan.FromSeconds(5));
             wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementToBeClickable(_onImage));
             webDriver.FindElement(_onImage).Click();
             webDriver.FindElement(_userProfile).Click();
