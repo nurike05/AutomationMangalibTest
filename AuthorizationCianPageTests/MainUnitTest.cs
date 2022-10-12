@@ -13,7 +13,6 @@ namespace AuthorizationCianPageTests
     [TestFixture]
     public class Tests
     {
-        //private IWebDriver driver;
         private Steps.Steps steps = new Steps.Steps();
         TestListener listener = new TestListener();
 
@@ -38,7 +37,22 @@ namespace AuthorizationCianPageTests
             // assert
             Assert.AreEqual(expectedResult, actualResult);
         }
-      
+
+        [Test]
+        public void MainTestViaXml()
+        {
+
+            // arrange
+            steps.LoginMangalibViaXml();
+            var expectedResult = UserCreator.USER_NAME;
+
+            // act
+            var actualResult = steps.CheckUserName();
+
+            // assert
+            Assert.AreEqual(expectedResult, actualResult);
+        }
+
         [Ignore("")]
         [TestCaseSource(nameof(TestData))]
         public void MainTestWithXML(string login, string password)

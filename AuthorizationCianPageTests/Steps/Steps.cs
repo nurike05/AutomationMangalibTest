@@ -32,8 +32,13 @@ namespace AuthorizationCianPageTests.Steps
         {
             MainMenuPageObject mainMenu = new MainMenuPageObject(driver);
             mainMenu.OpenPage();
+            mainMenu.SignIn().Login(testUser);
+        }
+        public void LoginMangalibViaXml()
+        {
+            MainMenuPageObject mainMenu = new MainMenuPageObject(driver);
+            mainMenu.OpenPage();
             mainMenu.SignIn().Login(testUser.GetUsernameFromProp, testUser.GetPasswordFromProp);
-           // mainMenu.SignIn().Login(testUser);
         }
 
         public void LoginMangalib(string login, string password)

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "Kf8hBtDsY8qYwDUnunqhwmLFotlWHDTfR5QpX/X5iBhBYYoVUURWxlvoA/aQMQ05Jj5d2gEHbnF2XtTHpGhDbQ==",
+  "dgSpecHash": "z0eJE/QaZ6/fU3ni6xla1oCay0vvBBlKa5V6JwFjO3lD09cLoAQZLE64zmJjR4ovyNNEJVgwWzhUXDLvHd/biw==",
   "success": true,
   "projectFilePath": "C:\\Users\\Nurlan_Nurdildauly\\source\\repos\\AutomationMangalibGit\\AuthorizationCianPageTests\\AuthorizationCianPageTests.csproj",
   "expectedPackageFiles": [
@@ -29,7 +29,6 @@
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\runtime.win-x86.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-x86.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
     "C:\\Users\\Nurlan_Nurdildauly\\.nuget\\packages\\selenium.firefox.webdriver\\0.27.0\\selenium.firefox.webdriver.0.27.0.nupkg.sha512",
     "C:\\Users\\Nurlan_Nurdildauly\\.nuget\\packages\\selenium.webdriver\\4.5.0\\selenium.webdriver.4.5.0.nupkg.sha512",
-    "C:\\Users\\Nurlan_Nurdildauly\\.nuget\\packages\\selenium.webdriver.chromedriver\\106.0.5249.6100\\selenium.webdriver.chromedriver.106.0.5249.6100.nupkg.sha512",
     "C:\\Users\\Nurlan_Nurdildauly\\.nuget\\packages\\selenium.webdriver.iedriver\\4.5.0\\selenium.webdriver.iedriver.4.5.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\system.collections\\4.3.0\\system.collections.4.3.0.nupkg.sha512",
     "C:\\Users\\Nurlan_Nurdildauly\\.nuget\\packages\\system.configuration.configurationmanager\\6.0.1\\system.configuration.configurationmanager.6.0.1.nupkg.sha512",
@@ -67,7 +66,8 @@
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\system.xml.readerwriter\\4.3.0\\system.xml.readerwriter.4.3.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\system.xml.xmldocument\\4.3.0\\system.xml.xmldocument.4.3.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\system.xml.xpath\\4.3.0\\system.xml.xpath.4.3.0.nupkg.sha512",
-    "C:\\Users\\Nurlan_Nurdildauly\\.nuget\\packages\\system.xml.xpath.xmldocument\\4.3.0\\system.xml.xpath.xmldocument.4.3.0.nupkg.sha512"
+    "C:\\Users\\Nurlan_Nurdildauly\\.nuget\\packages\\system.xml.xpath.xmldocument\\4.3.0\\system.xml.xpath.xmldocument.4.3.0.nupkg.sha512",
+    "C:\\Users\\Nurlan_Nurdildauly\\.nuget\\packages\\webdriver.chromedriver.win32\\105.0.5195.52\\webdriver.chromedriver.win32.105.0.5195.52.nupkg.sha512"
   ],
   "logs": []
 }

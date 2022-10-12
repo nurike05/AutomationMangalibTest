@@ -7,22 +7,12 @@ namespace AuthorizationCianPageTests.Model
 {
     public class User
     {
-        private string username;
-        private string password;
+        public string GetUsername { get; }
+        public string GetPassword { get; }
         public User(string username, string password)
         {
-            this.username = username;
-            this.password = password;
-        }
-
-        public string GetUsername
-        {
-            get { return username; }
-        }
-
-        public string GetPassword
-        { 
-            get { return password; }
+            GetUsername = username;
+            GetPassword = password;
         }
 
         public string GetUsernameFromProp
