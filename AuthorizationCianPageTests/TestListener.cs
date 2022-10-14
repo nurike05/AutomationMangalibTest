@@ -18,7 +18,7 @@ namespace AuthorizationCianPageTests
             var browser = steps.InitBrowser();
             string time = DateTime.Now.ToString("dd_MM_yy_HH_mm_ss");
             Screenshot screenshot = ((ITakesScreenshot)browser).GetScreenshot();
-            string filePath = "C:\\Users\\Nurlan_Nurdildauly\\Desktop\\Samples\\" + time + ".png";
+            string filePath = "C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\Artifact Genarator\\" + time + ".png";
             screenshot.SaveAsFile(filePath);
         }
     }

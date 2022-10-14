@@ -53,8 +53,7 @@ namespace AuthorizationCianPageTests
             Assert.AreEqual(expectedResult, actualResult);
         }
 
-        [Ignore("")]
-        [TestCaseSource(nameof(TestData))]
+        [Test, TestCaseSource(nameof(TestData))]
         public void MainTestWithXML(string login, string password)
         {
             // arrange
@@ -68,7 +67,7 @@ namespace AuthorizationCianPageTests
             Assert.AreEqual(expectedResult, actualResult);
         }
 
-        private IEnumerable TestData()
+         private static IEnumerable TestData()
         {
             // read data from xml file
             var doc = XDocument.Load(@"C:\Users\Nurlan_Nurdildauly\source\repos\AutomationMangalibGit\testing.xml");
