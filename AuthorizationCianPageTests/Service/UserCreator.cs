@@ -12,7 +12,7 @@ namespace AuthorizationCianPageTests.Service
     public static class UserCreator
     {
         public static readonly string USER_NAME = "nurike05";
-        public static readonly string USER_PASSWORD = "1718121707a";
+        public static readonly string USER_PASSWORD = "achacha";
 
         public static User SetWithCredentialsFromProperty()
         {
